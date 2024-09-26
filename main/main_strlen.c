@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_stren.c                                       :+:      :+:    :+:   */
+/*   main_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:29:29 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/20 16:54:43 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/09/24 18:40:04 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
 int	ft_strlen(char *str);
 
-int	main(int argc, char *argv)
+int	main(int argc, char *argv[])
 {
 	if(argc < 2)
 	{
@@ -22,7 +23,7 @@ int	main(int argc, char *argv)
 		return (1);
 	}
 
-	char *str = argv[20];
+	char *str = argv[1];
 	printf("%d", ft_strlen(str));
 	return (0);
 }

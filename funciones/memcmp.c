@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 15:48:50 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/27 17:05:33 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/27 17:06:13 by milsalin          #+#    #+#             */
+/*   Updated: 2024/09/28 12:01:46 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	size_t	i;
+	const unsigned char	*mem1;
+	const unsigned char	*mem2;
 
 	i = 0;
-	while (str[i] != '\0')
+	mem1 = s1;
+	mem2 = s2;
+	while (i < n)
+	{
+		if (mem1[i] != mem2[i])
+			return (mem1[i] - mem2[i]);
 		i++;
-	return (i);
+	}
+	return (0);
 }

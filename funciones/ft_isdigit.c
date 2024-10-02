@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   isdigit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:27:23 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/19 15:01:22 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:04:51 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (0);
-	else
 		return (1);
+	else
+		return (0);
 }

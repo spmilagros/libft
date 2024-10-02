@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   isprint.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:28:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/20 15:30:00 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:44:58 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (0);
-	else
 		return (1);
+	else
+		return (0);
 }

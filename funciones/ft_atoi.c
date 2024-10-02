@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:06:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/28 12:01:46 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/30 16:19:57 by milsalin          #+#    #+#             */
+/*   Updated: 2024/09/30 19:04:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	const unsigned char	*mem1;
-	const unsigned char	*mem2;
+	int	i;
+	int	result;
+	int	sign;
 
 	i = 0;
-	mem1 = s1;
-	mem2 = s2;
-	while (i < n)
+	result = 0;
+	sign = 1;
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
+		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
+		i++;
+	if (nptr[0] == '-')
+		sign = -1;
+	else
+		sign = 1;
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if (mem1[i] != mem2[i])
-			return (mem1[i] - mem2[i]);
+		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (0);
+	return (result * sign);
 }

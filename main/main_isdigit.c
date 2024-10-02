@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_isdigit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:45:10 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/19 14:58:33 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:04:45 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	main (int argc, char *argv[])
 		return (1);
 	}
 	char	c = argv[1][0];
-	printf ("%d", ft_isdigit(c));
+	printf ("%d \n", ft_isdigit(c));
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:13:57 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/19 12:52:12 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:04:48 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc,char *argv[])
 	}
 	char	c = argv[1][0];
 
-	printf("%d", ft_isalpha(c));
+	printf("%d\n", ft_isalpha(c));
 	return (0);
 }

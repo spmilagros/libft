@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   main_atoi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 15:03:24 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/19 16:19:10 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/30 16:20:39 by milsalin          #+#    #+#             */
+/*   Updated: 2024/09/30 19:05:01 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <unistd.h>
+#include <stdio.h>
+
+int	ft_atoi(const char *nptr);
+
+int	main(int argc, char *argv[])
 {
-	if ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (0);
-	else
+	if(argc < 2)
+	{
+		write(1, "Error\n", 6);
 		return (1);
+	}
+
+	char *str = argv[1];
+	printf("%d", ft_atoi(str));
+	return (0);
 }

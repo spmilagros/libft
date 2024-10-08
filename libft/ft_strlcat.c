@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:06:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/08 18:00:59 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/25 23:20:38 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/02 12:16:21 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t				i;
-	const unsigned char	*mem1;
-	const unsigned char	*mem2;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
+	dst_len = 0;
+	src_len = 0;
 	i = 0;
-	mem1 = s1;
-	mem2 = s2;
-	while (i < n)
+	while (dst_len < size && dst[dst_len] != '\0')
+		dst_len++;
+	while (src[src_len] != '\0')
+		src_len++;
+	if (dst_len != size)
 	{
-		if (mem1[i] != mem2[i])
-			return (mem1[i] - mem2[i]);
-		i++;
+		while ((src[i] != '\0') && (dst_len + i < size - 1))
+		{
+			dst[dst_len + i] = src[i];
+			i++;
+		}
 	}
-	return (0);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   isalnum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:06:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/08 18:00:59 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/19 15:03:24 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/01 18:41:48 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_isalnum(int c)
 {
-	size_t				i;
-	const unsigned char	*mem1;
-	const unsigned char	*mem2;
-
-	i = 0;
-	mem1 = s1;
-	mem2 = s2;
-	while (i < n)
-	{
-		if (mem1[i] != mem2[i])
-			return (mem1[i] - mem2[i]);
-		i++;
-	}
-	return (0);
+	if ((c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'))
+		return (1);
+	else
+		return (0);
 }

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:06:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/08 18:00:59 by milsalin         ###   ########.fr       */
+/*   Created: 2024/09/25 15:54:32 by milsalin          #+#    #+#             */
+/*   Updated: 2024/09/26 11:42:10 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t				i;
-	const unsigned char	*mem1;
-	const unsigned char	*mem2;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
-	mem1 = s1;
-	mem2 = s2;
-	while (i < n)
+	src_len = 0;
+	while ((i < size - 1) && (src[i] != '\0'))
 	{
-		if (mem1[i] != mem2[i])
-			return (mem1[i] - mem2[i]);
+		dst[i] = src[i];
 		i++;
 	}
-	return (0);
+	dst[i] = '\0';
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
+	return (src_len);
 }

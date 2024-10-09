@@ -6,33 +6,49 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:54:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/08 17:59:55 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/09 19:43:27 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
+
+static size_t word_count(int n)
+{
+	size_t	count;
+	
+	count = 0;
+	if (n == 0)
+		count = 1;
+	if (n < 0)
+	{
+		count = 1;
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		n / 10;
+		count++;
+	}
+	return (count);
+}
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		num;
-	char	*str;
+	int i;
+	int num;
+	char *str;
+	size_t len;
 
 	i = 1;
 	num = n;
-	if (n < 0)
-		num = -n;
-	while (num / 10 != 0)
-	{
-		num = num / 10;
-		i++;
-	}
-	if (n < 0)
-		i++;
-	str = (char *)malloc(i + 1);
+	
+	str = (char *)malloc(len + 1) * sizeof(char *);
+	len = ft_strlen(str);
 	if (str == NULL)
 		return (NULL);
 	str[i] = '\0';
+	
 	if (n == 0)
 	{
 		str[0] = '0';

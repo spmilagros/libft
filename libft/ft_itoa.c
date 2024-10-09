@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:54:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/09 19:43:27 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/09 19:52:12 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,12 @@ static size_t word_count(int n)
 
 char	*ft_itoa(int n)
 {
-	int i;
-	int num;
-	char *str;
-	size_t len;
-
-	i = 1;
-	num = n;
+	size_t	len;
+	
+	if (n == -2147483648)
+		return (NULL);
+	if (n == 2147483648)
+		return (NULL);
 	
 	str = (char *)malloc(len + 1) * sizeof(char *);
 	len = ft_strlen(str);

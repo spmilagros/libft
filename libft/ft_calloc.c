@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 23:33:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:48:47 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/12 00:18:37 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/12 00:18:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	src_len;
+void	ft_bzero(void *s, size_t n);
 
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size == 0)
-		return (src_len);
-	i = 0;
-	while (i < (size - 1) && src[i] != '\0')
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	size_t	total_size;
+	void	*ptr;
+
+	total_size = nmemb * size;
+	if (size == 0 && nmemb == 0)
 	{
-		dst[i] = src[i];
-		i++;
+		ptr = malloc(1);
+		if (!ptr)
+			return (NULL);
+		return (ptr);
 	}
-	dst[i] = '\0';
-	return (src_len);
+	if (!nmemb || !size)
+		return (NULL);
+	if (total_size > INT_MAX)
+		return (NULL);
+	ptr = malloc(total_size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }

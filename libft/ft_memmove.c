@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_strncmp.c                                     :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 17:02:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:40:24 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/11 18:48:59 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/11 23:49:51 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include <stddef.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n);
-
-int main(int argc, char *argv[])
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    if (argc != 4)
-    {
-        write(1, "Error", 5);
-        return (1);
-    }
-    const char *s1 = argv[1];
-    const char *s2 = argv[2];
-    size_t n = atoi(argv[3]);
+	unsigned char		*cast_dest;
+	const unsigned char	*cast_src;
 
-    printf("%d", ft_strncmp(s1, s2, n));
-    //return (0);
+	cast_dest = (unsigned char *)dest;
+	cast_src = (const unsigned char *)src;
+	if (dest == src || n == 0)
+		return (dest);
+	if (cast_src < cast_dest)
+	{
+		while (n--)
+			cast_dest[n] = cast_src[n];
+	}
+	else
+	{
+		while (n--)
+		{
+			*cast_dest = *cast_src;
+			cast_dest++;
+			cast_src++;
+		}
+	}
+	return (dest);
 }
-*/

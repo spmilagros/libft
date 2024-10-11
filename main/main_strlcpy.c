@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:56:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/26 11:42:08 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/11 23:39:53 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
 #include <unistd.h>
 #include <stddef.h>
@@ -33,3 +34,5 @@ int	main(int argc, char *argv[])
 	printf("%zu", ft_strlcpy(dst, src, size));
 	return (0);
 }
+*/
+

@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   main_toupper.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 23:33:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:48:47 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/11 18:56:36 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/11 18:56:53 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h> //write
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_toupper(int c);
+
+int main(int argc, char *argv[])
 {
-	size_t	i;
-	size_t	src_len;
+	int		i;
+	char	c;
 
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size == 0)
-		return (src_len);
-	i = 0;
-	while (i < (size - 1) && src[i] != '\0')
+	if (argc < 2)
 	{
-		dst[i] = src[i];
-		i++;
+		write(1, "error\n", 6);
+		return (1);
 	}
-	dst[i] = '\0';
-	return (src_len);
+	else
+	{
+		i = 0;
+		while (argv[1][i] != '\0')
+		{
+			c = argv[1][i];
+			c = ft_toupper(c);
+			write(1, &c, 1);
+			i++;
+		}
+		write(1, "\n", 1);
+		return (0);
+	}
 }

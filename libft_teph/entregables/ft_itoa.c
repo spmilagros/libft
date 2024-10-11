@@ -3,31 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: strojo-h <strojo-h@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 16:54:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/09 19:52:12 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/10 22:03:48 by strojo-h          #+#    #+#             */
+/*   Updated: 2024/10/10 22:06:48 by strojo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include <stddef.h>
 
-static size_t word_count(int n)
+static size_t	ft_count_digits(int n)
 {
 	size_t	count;
-	
-	count = 0;
-	if (n == 0)
-		count = 1;
-	if (n < 0)
+
+	count = (n <= 0);
+	while (n)
 	{
-		count = 1;
-		n *= -1;
-	}
-	while (n != 0)
-	{
-		n / 10;
+		n /= 10;
 		count++;
 	}
 	return (count);
@@ -35,34 +28,26 @@ static size_t word_count(int n)
 
 char	*ft_itoa(int n)
 {
+	char	*str;
 	size_t	len;
-	
-	if (n == -2147483648)
+	long	num;
+	int		sign;
+
+	len = ft_count_digits(n);
+	num = n;
+	sign = (n < 0);
+	str = (char *)malloc(len + 1);
+	if (!str)
 		return (NULL);
-	if (n == 2147483648)
-		return (NULL);
-	
-	str = (char *)malloc(len + 1) * sizeof(char *);
-	len = ft_strlen(str);
-	if (str == NULL)
-		return (NULL);
-	str[i] = '\0';
-	
-	if (n == 0)
+	str[len] = '\0';
+	if (sign)
+		num = -num;
+	while (len--)
 	{
-		str[0] = '0';
-		return (str);
+		str[len] = (num % 10) + '0';
+		num /= 10;
 	}
-	if (n < 0)
-		num = -n;
-	else
-		num = n;
-	while (num > 0)
-	{
-		str[--i] = (num % 10) + '0';
-		num = num / 10;
-	}
-	if (n < 0)
+	if (sign)
 		str[0] = '-';
 	return (str);
 }

@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   main_bzero.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 23:33:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:48:47 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/11 17:43:07 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/11 17:43:10 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	main(void)
 {
-	size_t	i;
-	size_t	src_len;
+	char	buffer[10];
 
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size == 0)
-		return (src_len);
-	i = 0;
-	while (i < (size - 1) && src[i] != '\0')
+	// Inicializamos el buffer con caracteres 'A'
+	for (int i = 0; i < 10; i++)
+		buffer[i] = 'A';
+
+	// Llamamos a bzero para llenar los primeros 5 bytes con ceros
+	ft_bzero(buffer, 5);
+
+	// Imprimimos el contenido del buffer
+	for (int i = 0; i < 10; i++)
 	{
-		dst[i] = src[i];
-		i++;
+		if (buffer[i] == '\0')
+			printf("0 ");
+		else
+			printf("%c ", buffer[i]);
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return (0);
 }

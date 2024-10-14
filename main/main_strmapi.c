@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:16:37 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:17:14 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+
+char ft_tolower(unsigned int index, char c);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
-
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
+	const char *str = "HOLA MUNDO";
+	char *result;
+	
+	result = ft_strmapi(str, ft_tolower);
+	if (!result)
 	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
+		printf("Error al asignar memoria.\n");
 	}
-	return (s);
+	else
+	{
+		printf("Resultado: %s\n", result);
+		free(result);
+	}
+	return (0);
 }

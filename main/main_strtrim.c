@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_strtrim.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:08:57 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:09:09 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+	const char	*str1;
+	const char	*set;
+	char 		*trimmed;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
+	str1 = "   Hola, 42 Madrid!   ";
+	set = " ";
+	trimmed = ft_strtrim(str1, set);
+	if (trimmed)
 	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
+		printf("Original: '%s'\n", str1);
+		printf("Cortada: '%s'\n", trimmed);
+		free(trimmed);
 	}
-	return (s);
+	else
+		printf("Error al cortar la cadena.\n");
+	return (0);
 }

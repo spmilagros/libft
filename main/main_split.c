@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_split.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:09:30 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:09:45 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char	**ft_split(const char *s, char c);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+	const char *str;
+	char **result;
+	size_t i;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
+	str = "Hola 42, aqui vamos!";
+	result = ft_split(str, ' ');
+	i = 0;
+	while (result[i] != NULL)
 	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
+		printf("Palabra %zu: %s\n", i, result[i]);
+		free(result[i]);
+		i++;
 	}
-	return (s);
+	free(result);
+	return (0);
 }

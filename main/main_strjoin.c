@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_strjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:08:32 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:08:37 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h> // Para malloc y free
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+	const char *str1 = "Hola, ";
+	const char *str2 = "42!";
+	char *result;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
+	result = ft_strjoin(str1, str2);
+	if (result != NULL)
 	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
+		printf("Nuevo string: %s\n", result);
+		free(result);
 	}
-	return (s);
+	else
+		printf("Error con malloc - no se pudo asignar.\n");
+	return (0);
 }

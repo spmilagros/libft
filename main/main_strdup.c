@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_strdup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 22:06:51 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 22:31:42 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char *ft_strdup(const char *s);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+	const char *original = "Holaaaaa, ya quiero pasar la libft!";
+	char *duplicate;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
+	duplicate = ft_strdup(original);
+	if (duplicate == NULL)
 	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
+		printf("Error al duplicar la cadena.\n");
+		return (1);
 	}
-	return (s);
+
+	printf("Cadena original: %s\n", original);
+	printf("Cadena duplicada: %s\n", duplicate);
+
+	free(duplicate);
+	return (0);
 }

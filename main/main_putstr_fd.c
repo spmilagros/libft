@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_putstr_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:24:35 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:25:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <fcntl.h> // Para open()
+#include <unistd.h> // Para close()
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_putstr_fd(char *s, int fd);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+	int fd;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
-	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
-	}
-	return (s);
+	fd = open("output_str.txt", O_WRONLY | O_CREAT, 0644);
+	if (fd == -1)
+		return (1); 
+	ft_putstr_fd("Hello 42 Madrid!", fd);
+	close(fd);
+	return (0);
 }

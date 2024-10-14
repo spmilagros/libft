@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:54:35 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/06 23:24:48 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/14 23:07:25 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,21 @@ int	main(int argc, char *argv[])
 
 	return (0);
 }
+/* main simple
+
+#include <stdio.h>
+#include <stdlib.h>
+
+char *ft_itoa(int n);
+
+int main(void)
+{
+    int number;
+    
+    number = -15;
+    char *number_str = ft_itoa(number);
+    printf("Converted number: %s\n", number_str);
+    free(number_str);
+    return (0);
+}
+*/

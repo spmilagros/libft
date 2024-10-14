@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main_substr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 19:00:40 by milsalin         ###   ########.fr       */
+/*   Created: 2024/10/14 23:07:47 by milsalin          #+#    #+#             */
+/*   Updated: 2024/10/14 23:08:06 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+int main(void)
 {
-	unsigned char	*cast_s;
-	unsigned char	cast_c;
+    const char *str = "Holaaa 42 Madrid";
+    char *substr;
 
-	cast_s = (unsigned char *)s;
-	cast_c = (unsigned char)c;
-	while (n != 0)
-	{
-		*cast_s = cast_c;
-		cast_s++;
-		n--;
-	}
-	return (s);
+    substr = ft_substr(str, 7, 5);
+    printf("Subcadena: %s\n", substr);
+    free(substr);
+    return (0);
 }

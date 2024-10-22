@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:46:03 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:49:46 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:18 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

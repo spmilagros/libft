@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:48:59 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:49:51 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:23 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

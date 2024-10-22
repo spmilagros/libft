@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:24:30 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 23:25:25 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/21 22:59:02 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(void)
 	int fd = open("pruebaputchar.txt", O_WRONLY | O_CREAT, 0644);
 	if (fd == -1)
 		return (1);
-	ft_putchar_fd('s', fd);
+	ft_putchar_fd('a', fd);
 	close(fd);
 	return (0);
 }

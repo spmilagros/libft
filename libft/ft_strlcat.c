@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 23:33:22 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:48:41 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:42 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 size_t	ft_strlen(const char *s);

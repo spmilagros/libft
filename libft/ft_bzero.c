@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:41:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 17:46:36 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:01:44 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)

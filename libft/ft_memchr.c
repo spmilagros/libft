@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 22:41:00 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:49:32 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:08 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)

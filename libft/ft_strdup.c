@@ -6,10 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:19:08 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/12 00:19:21 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:32 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s1)

@@ -6,12 +6,12 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:24:44 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 23:26:33 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/21 22:56:45 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>  // Para open
-#include <unistd.h> // Para close
+#include <fcntl.h>  // open
+#include <unistd.h> // close
 
 void	ft_putnbr_fd(int n, int fd);
 

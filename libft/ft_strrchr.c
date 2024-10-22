@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:06:17 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/21 18:01:15 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/21 21:48:15 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)last_c);
 	return (NULL);
 }
-cl

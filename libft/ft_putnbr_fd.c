@@ -6,11 +6,12 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:22:31 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 23:48:27 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:02:28 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -21,7 +22,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (num < 0)
 	{
 		write(fd, "-", 1);
-		num *= -1;
+		num = num * -1;
 	}
 	if (num / 10 != 0)
 		ft_putnbr_fd(num / 10, fd);

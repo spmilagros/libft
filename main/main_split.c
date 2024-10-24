@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:09:30 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 02:54:42 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/24 16:11:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 	char **result;
 	size_t i;
 
-	str = "Hola 42, aqui vamos!";
+	str = "Hola 42, Madrid!";
 	result = ft_split(str, ' ');
 	i = 0;
 	while (result[i] != NULL)

@@ -6,12 +6,12 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 23:33:27 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 02:19:56 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/24 16:21:17 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h> // Para size_t
+#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

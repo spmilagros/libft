@@ -6,12 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:25:53 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/22 17:03:00 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/24 02:05:18 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 #include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

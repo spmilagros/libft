@@ -6,13 +6,26 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:18:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/12 00:18:57 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 22:52:54 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
-void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
+}
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -20,17 +33,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	total_size = nmemb * size;
-	if (size == 0 && nmemb == 0)
-	{
-		ptr = malloc(1);
-		if (!ptr)
-			return (NULL);
-		return (ptr);
-	}
-	if (!nmemb || !size)
-		return (NULL);
-	if (total_size > INT_MAX)
-		return (NULL);
 	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);

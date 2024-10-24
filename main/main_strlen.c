@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:29:29 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/24 18:40:04 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 01:17:40 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc, char *argv[])
 	}
 
 	char *str = argv[1];
-	printf("%d", ft_strlen(str));
+	printf("%d \n", ft_strlen(str));
 	return (0);
 }

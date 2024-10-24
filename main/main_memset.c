@@ -6,17 +6,20 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:54:12 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 17:27:08 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 01:10:49 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int main() {
+void	*ft_memset(void *s, int c, size_t n);
+
+int main()
+{
     char buffer[10];
 
     // Llenamos el buffer con el carácter 'A'
-    ft_memset(buffer, 'A', 10);
+    ft_memset(buffer, 'A', 5);
 
     // Imprimimos el buffer
     for (int i = 0; i < 10; i++) {

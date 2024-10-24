@@ -6,11 +6,13 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:43:07 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 17:43:10 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:44:28 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
+void	ft_bzero(void *s, size_t n);
 
 int	main(void)
 {

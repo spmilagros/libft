@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 17:06:20 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/28 12:04:28 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 02:07:07 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int	main(int argc, char *argv[])
     const void *s2 = argv[2];
     size_t n = atoi(argv[3]);
 
-    printf("%d", ft_memcmp(s1, s2, n));
+    printf("%d\n", ft_memcmp(s1, s2, n));
 }

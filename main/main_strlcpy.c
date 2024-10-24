@@ -6,33 +6,25 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:56:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:39:53 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/24 00:55:55 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include <stdio.h>
-#include <unistd.h>
-#include <stddef.h>
-#include <stdlib.h> // para usar atoi
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-int	main(int argc, char *argv[])
+int main(void)
 {
-	if(argc < 3)
-	{
-		write(1, "Error\n", 6);
-		return (1);
-	}
-
-	char *dst = argv[1];
-	const char *src = argv[2];
-	// Convertir argv[3] (cadena) a un entero de tipo size_t
-    size_t size = (size_t)atoi(argv[3]);
-
-	printf("%zu", ft_strlcpy(dst, src, size));
+	char *src;
+	char dst[6];
+	size_t size;
+	size_t result;
+	
+	src = "42Madrid";
+	size = sizeof(dst);
+	result = ft_strlcpy(dst, src, size);
+	printf("Cadena copiada: %s\n", dst);
+	printf("Longitud de la cadena original: %zu\n", result);
 	return (0);
 }
-*/
-

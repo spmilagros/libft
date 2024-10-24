@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:16:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 23:17:14 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/22 23:09:59 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,18 @@
 
 char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
-char ft_tolower(unsigned int index, char c);
+char ft_tolower(unsigned int index, char c)
+{
+	(void)	index;
+	unsigned char	cast_c;
+
+	cast_c = (unsigned char)c;
+	if (cast_c >= 'A' && cast_c <= 'Z')
+	{
+		return (cast_c + 32);
+	}
+	return (c);
+}
 
 int main(void)
 {

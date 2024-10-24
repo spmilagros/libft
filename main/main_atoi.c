@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 16:20:39 by milsalin          #+#    #+#             */
-/*   Updated: 2024/09/30 19:05:01 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 23:31:35 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int	main(int argc, char *argv[])
 	}
 
 	char *str = argv[1];
-	printf("%d", ft_atoi(str));
+	printf("%d\n", ft_atoi(str));
 	return (0);
 }

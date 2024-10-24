@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 22:06:51 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/14 22:31:42 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/23 22:22:06 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char *ft_strdup(const char *s);
 
 int main(void)
 {
-	const char *original = "Holaaaaa, ya quiero pasar la libft!";
+	const char *original = "Hola 42 Madrid";
 	char *duplicate;
 
 	duplicate = ft_strdup(original);

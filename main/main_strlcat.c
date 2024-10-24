@@ -6,11 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 23:20:53 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/11 23:40:12 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/24 01:21:30 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stddef.h>
@@ -31,7 +31,7 @@ int	main(int argc, char *argv[])
 	// Convertir argv[3] (cadena) a un entero de tipo size_t
     size_t size = (size_t)atoi(argv[3]);
 
-	printf("%zu", ft_strlcat(dst, src, size));
+	printf("%zu\n", ft_strlcat(dst, src, size));
 	return (0);
 }
-*/
+

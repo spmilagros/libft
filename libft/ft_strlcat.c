@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 23:33:22 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:20:57 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 19:33:43 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (dst_len + src_len);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%ld\n", ft_strlcat("Hola", "979", 2));
+	return(0);
+}*/

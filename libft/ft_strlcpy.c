@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 23:33:18 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 00:55:58 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 19:33:06 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (src_len);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	dst[10] = "Hola";
+	char	src[10] = "979455";
+
+	printf("%ld\n", ft_strlcpy(dst, src, 5));
+	return(0);
+}*/

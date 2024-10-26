@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 15:48:50 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/26 14:02:11 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 19:38:13 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,10 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%ld\n", strlen("Hola"));
+	return(0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:49:55 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 01:10:56 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 16:51:55 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,12 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	buffer_1[15] = "42Madrid";
+
+	printf("%s\n", (char *)ft_memset(buffer_1, 99, 3));
+	return(0);
+}*/

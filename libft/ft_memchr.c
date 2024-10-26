@@ -6,12 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 22:41:00 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 02:00:53 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:47:48 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -20,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	cast_s = (const unsigned char *)s;
 	cast_c = (unsigned char)c;
-	while (n != 0)
+	while (n != '\0')
 	{
 		if (*cast_s == cast_c)
 		{
@@ -31,3 +30,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*s = "Hola42";
+
+	char	*fc = (char *)ft_memchr(s, 'a', 5);
+
+	printf("%s", fc);
+	return(0);
+}*/

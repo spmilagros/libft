@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:22:27 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:20:05 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 17:22:52 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,10 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, "\n", 1);
 	}
 }
+/*int	main ()
+{
+	char	*s = "Hola";
+	
+	ft_putendl_fd(s, 1);
+	return(0);
+}*/

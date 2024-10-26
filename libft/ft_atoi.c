@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:18:17 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 23:31:33 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 08:58:52 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return ((result * sign));
 }
+/*
+int	main()
+{
+	char	*nptr = "34";
+
+	printf("%d\n", ft_atoi(nptr));
+	return (0);
+}*/

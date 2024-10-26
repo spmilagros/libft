@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:06:41 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:20:39 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 17:53:46 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,12 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*s = "Hola 42 Madrid";
+
+	printf("%s", ft_strchr(s, 'a'));
+	return(0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:31:45 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 15:23:41 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:02:58 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,10 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+/*int	main()
+{
+	int	n = 34;
+
+	printf("%s\n", ft_itoa(n));
+	return (0);
+}*/

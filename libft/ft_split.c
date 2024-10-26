@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 22:51:13 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:18:05 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 17:46:35 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,3 +74,17 @@ char	**ft_split(const char *s, char c)
 	array_substrs[index] = NULL;
 	return (array_substrs);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*str = "Holap42pMadrid";
+	char	**split = ft_split(str, 'p');
+	int		i = 0;
+	while (split[i] != NULL)
+	{
+		printf("%s\n", split[i]);
+		i++;
+	}
+	return(0);
+}*/

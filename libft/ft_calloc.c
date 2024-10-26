@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:18:37 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:19:12 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:51:29 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, total_size);
 	return (ptr);
 }
+/*
+#include <stdio.h>
+
+int	main()
+{
+	char	*fc;
+
+	fc = ft_calloc(10, sizeof(char));
+	free(fc);
+}*/

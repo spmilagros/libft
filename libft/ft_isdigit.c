@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:27:23 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 01:23:18 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:57:05 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,18 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+/*#include <stdio.h>
+#include <unistd.h>
+
+int	main(int argc,char *argv[])
+{
+	if (argc < 2)
+	{
+		write (1, "Error", 5);
+		return (1);
+	}
+	char	c = argv[1][0];
+
+	printf("%d\n", ft_isdigit(c));
+	return (0);
+}*/

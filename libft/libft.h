@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:02:00 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/15 21:10:37 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 16:01:58 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <limits.h>
 
 int		ft_isalnum(int c);

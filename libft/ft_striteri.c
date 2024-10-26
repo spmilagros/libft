@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:14:59 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/22 22:03:48 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 18:27:24 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
+}
+int	main()
+{
+	
 }

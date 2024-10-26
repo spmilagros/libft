@@ -6,12 +6,11 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 00:19:08 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 22:22:03 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/26 18:12:15 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -34,3 +33,12 @@ char	*ft_strdup(const char *s1)
 	dup[i] = '\0';
 	return (dup);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*fc;
+
+	fc = ft_strdup("Hola42");
+	printf("%s", fc);
+}*/

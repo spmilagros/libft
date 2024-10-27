@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:55:04 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/27 15:37:38 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:55:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ int	main()
 	printf("%c\n", ft_toupper('a'));
 	return(0);
 }*/
-

@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 23:14:52 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/26 19:41:14 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:06:32 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	result_str[i] = '\0';
 	return (result_str);
-}
-#include <stdio.h>
-
-void	ft_putchar_fdd(unsigned int fd, char *c)
-{
-	(void) fd;
-	write(1, c, 1);
-}
-
-int	main()
-{
-	ft_strmapi("Hola42\n", ft_putchar_fdd);
-	return(0);
 }

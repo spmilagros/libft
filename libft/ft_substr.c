@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 22:49:36 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 02:24:38 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:30:49 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(substr, &s[start], len + 1);
 	return (substr);
 }
+REVISAR
+
+/*#include <stdio.h>
+
+int 	main()
+{
+	char fc = *ft_substr("Hola42Madrid", 5, 4);
+
+	printf("%c\n", fc);
+}*/

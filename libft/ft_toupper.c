@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:55:04 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/27 13:45:36 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:37:38 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,12 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%c\n", ft_toupper('a'));
+	return(0);
+}*/
+

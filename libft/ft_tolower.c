@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:55:07 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/27 13:45:57 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:36:06 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,10 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	printf("%c\n", ft_tolower('A'));
+	return(0);
+}*/

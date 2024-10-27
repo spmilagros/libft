@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 22:51:10 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:22:34 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:30:52 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,13 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ft_strlcpy(trimmed_str, s1 + start, length + 1);
 	return (trimmed_str);
 }
+
+REVISAR
+/*
+#include <stdio.h>
+
+int	main()
+{
+	printf("%c\n", *ft_strtrim("Hola42domingo", "oi"));
+	return(0);
+}*/

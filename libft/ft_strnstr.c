@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 13:25:53 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/26 14:02:25 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:53:48 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*#include <stdio.h>
+
+int	main()
+{
+	char	*big = "Domingoxxxxxxx";
+	char	*little = "ngo";
+
+	printf("%s", ft_strnstr(big, little, 8));
+	return (0);
+}*/

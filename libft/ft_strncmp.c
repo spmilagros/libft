@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 23:33:27 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/27 14:30:21 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:46:06 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*#include <stdio.h>
 
+int	main()
+{
+	char	*s1 = "Hola42";
+	char	*s2 = "Hoto24";
+	
+	printf("%d\n", ft_strncmp(s1, s2, 3));
+	return(0);
+}*/

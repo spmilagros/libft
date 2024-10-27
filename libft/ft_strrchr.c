@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:06:17 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/24 16:21:26 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:04:27 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,22 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)last_c);
 	return (NULL);
 }
+/*#include <stdio.h>
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	main()
+{
+	const char	*s = "Domingoxxxx";
+	
+	printf("%c\n", *ft_strrchr(s, 'n'));
+	return(0);
+}*/

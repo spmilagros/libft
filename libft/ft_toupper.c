@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:55:04 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 01:36:25 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:45:36 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	cast_c;
-
-	cast_c = (unsigned char)c;
-	if (cast_c >= 'a' && cast_c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
-		return (cast_c - 32);
+		return (c - 32);
 	}
 	return (c);
 }

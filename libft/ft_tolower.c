@@ -6,7 +6,7 @@
 /*   By: milsalin <milsalin@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:55:07 by milsalin          #+#    #+#             */
-/*   Updated: 2024/10/23 01:37:11 by milsalin         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:45:57 by milsalin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char	cast_c;
-
-	cast_c = (unsigned char)c;
-	if (cast_c >= 'A' && cast_c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 	{
-		return (cast_c + 32);
+		return (c + 32);
 	}
 	return (c);
 }
